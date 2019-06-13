@@ -1,0 +1,60 @@
+<!--bootstrap-->
+{% load static %}
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static './css/register.css'%}">
+
+  <style>
+      form {
+    margin-left: 55%;
+    margin-right:15%;
+    width: 70%;
+}
+body{background:url(https://images.wallpaperscraft.com/image/bank_garland_light_118870_2560x1600.jpg);
+background-attachment:fixed;
+background-size:cover;
+}
+  </style>
+
+<br>
+<br>
+<br>
+<H1  align='center' style="color: aliceblue">Login</H1>
+<br>
+<br>
+<br>
+
+    
+
+    <div class="alert alert-warning alert-dismissible  show" role="alert">
+        {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <br>
+      <br>
+<div class="col-md-6 offset-md-3">
+<form method="POST">
+{% csrf_token %}
+  <div class="form-group">
+ 
+    <input type="text" class="form-control" placeholder="Enter Username" name="username">
+   
+  </div>
+  <div class="form-group">
+    
+    <input type="password" class="form-control" placeholder="Enter Password" name="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+</div>

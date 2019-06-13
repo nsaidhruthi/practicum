@@ -1,0 +1,76 @@
+    <!-- Main Section -->
+    {% load static%}
+     <link rel="stylesheet" href="{% static './css/detail.css'%}">
+    {% comment %} <div class="container">
+      <h2 class="heading font-weight-light text-center">{{decoration.name}}</h2>
+    </div>
+    <div class="container main-part">
+      <!-- Card for details -->
+      {% include 'partials/_decoration.html' %}
+     </div> {% endcomment %}
+    <div class="product" >
+  <div class="header">
+    <div class="back"></div>
+  </div>
+  <div class="main">
+  <h1 align="center">{{decoration.decorationname}}</h1>
+    <div class="left">
+    {% comment %} {% if object1.name == decorations %} {% endcomment %}
+      <br>
+      <br>
+      <h3>no of cakes in pack:{{decoration.quantity}}</h3>
+      <h4> {{decoration.price}}</h4>
+      <br>
+      <br>
+      <div class= "product1" >
+      <div class="container main-part">
+      <!-- Card for details -->
+      {% comment %} {% include 'eventitems/cipcakes.html' %} {% endcomment %}
+      <img width="200px" height="200px" src="{{decoration.image.url}}">
+     </div>
+     </div>
+    </div>
+    <br>
+    <br>
+  
+    <div class="right">
+      <p ><font color="#121914" size="3px">most popular decoration item for children is {{decoration.decorationname}} <br>A decoration is a small cake designed to serve one person, which may be baked in a small thin paper or aluminum cup. As with larger cakes, icing and other cake decorations such as fruit and candy may be applied.</font></p>
+      <br>
+      
+      <p ><font color="#121914" size="3px">availability:{{decoration.avilable}}</font></p>
+   
+      <p>
+        <span class="fa fa-star yellow"></span>
+        <span class="fa fa-star yellow"></span>
+        <span class="fa fa-star yellow"></span>
+        <span class="fa fa-star yellow"></span>
+        <span class="fa fa-star"></span>
+       <font size:"3px" color="#121914"> <span>(4.67 - 172 reviews)</span>
+      </font>
+      </p>
+      <br>
+     <p class="quantity"><div class="form-group">
+     <font size:"10px" color="#121914"> 
+        <label>Quantity: </label>
+        </font>
+        
+    </div></p> 
+    
+    </div>
+  </div>
+  <br>
+   
+     
+    
+
+  </div>
+</div>
+
+    <!-- Main Section ends-->
+
+    <!-- footer -->
+    
+    <!-- footer ends -->
+  
+  </body>
+</html>

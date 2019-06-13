@@ -1,0 +1,54 @@
+<!--bootstrap-->
+{% load static %}
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static './css/register.css'%}">
+
+  <style>
+      form {
+    margin-left: 40%;
+    margin-right:15%;
+    width: 70%;
+}
+body{background:url(https://static1.squarespace.com/static/52dcf450e4b0cb24e89a75cb/5919adf8579fb3dea4ff2a4b/5919b03e3a0411c102583074/1494855852130/IMG_4493aaa.JPG?format=1000w);
+background-attachment:fixed;
+background-size:cover;
+}
+  </style>
+
+<br>
+<br>
+<br>
+<H1  align='center' style="color: aliceblue">Edit Profile</H1>
+<br>
+<br>
+<br>
+
+<form  method="POST" action="{% url 'edit_profile' %}">
+{% csrf_token %}
+{% if form.errors %}
+<div class="alert alert-warning alert-dismissable" role="alert">
+<button class="close" data-dismiss="alert">
+<small><sup>x</sup></small>
+</button>
+    <p> your form has errors...</p>
+    {% for field in form   %}
+    {% if field.errors %}
+    {{ field.errors }}
+    {% endif %}
+
+    {% endfor %}
+</div>
+
+{% endif %}
+{{form.as_p}}
+<br>
+<br>
+<input type="submit" value="Edit profile" class="btn btn-secondary">
+</form>
+</br>
+<p align="center" style="color: white"><small><a style="color: whitesmoke" href="{% url 'change_password' %}">Click here</a> To change your password</small></p>
+

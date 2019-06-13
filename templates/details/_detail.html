@@ -1,0 +1,206 @@
+
+    <!-- Main Section -->
+    {% load static%}
+    <link rel="stylesheet" href="{% static './css/detail.css'%}">
+    {% comment %} <div class="container">
+      <h2 class="heading font-weight-light text-center">{{cupcake.name}}</h2>
+    </div>
+    <div class="container main-part">
+      <!-- Card for details -->
+      {% include 'partials/_cupcake.html' %}
+     </div> {% endcomment %}
+    <div class="product" >
+  <div class="header">
+    <div class="back"></div>
+  </div>
+  <div class="main">
+  <h1 align="center">{{cupcake.flavour}}</h1>
+    <div class="left">
+    {% comment %} {% if object1.name == cupcakes %} {% endcomment %}
+      <br>
+      <br>
+      <h3>no of cakes in pack:{{cupcake.quantity}}</h3>
+      <h4> {{cupcake.price}}</h4>
+      <br>
+      <br>
+      <div class= "product1" >
+      <div class="container main-part">
+      <!-- Card for details -->
+      {% comment %} {% include 'eventitems/cipcakes.html' %} {% endcomment %}
+      <img width="200px" height="200px" src="{{cupcake.image.url}}">
+     </div>
+     </div>
+    </div>
+    <br>
+    <br>
+  
+    <div class="right">
+      <p ><font color="#121914" size="3px">most loveble flavor of indians is {{cupcake.flavour}} <br>A cupcake is a small cake designed to serve one person, which may be baked in a small thin paper or aluminum cup. As with larger cakes, icing and other cake decorations such as fruit and candy may be applied.</font></p>
+      <br>
+      
+      <p ><font color="#121914" size="3px">availability:{{cupcake.avilable}}</font></p>
+   
+      <p>
+        <span class="fa fa-star yellow"></span>
+        <span class="fa fa-star yellow"></span>
+        <span class="fa fa-star yellow"></span>
+        <span class="fa fa-star yellow"></span>
+        <span class="fa fa-star"></span>
+       <font size:"3px" color="#121914"> <span>(4.67 - 172 reviews)</span>
+      </font>
+      </p>
+      <br>
+     <p class="quantity"><div class="form-group">
+     <font size:"10px" color="#121914"> 
+        <label>Quantity: </label>
+        </font>
+        {% comment %} <div class="input-group">
+            <div class="input-group-btn">
+                <button id="down" class="btn btn-primary" onclick=" down('0')"><span class="glyphicon glyphicon-minus">-</span></button>
+            </div>
+            <input type="text" id="myNumber" class="form-control input-number" value="1" />
+            
+            <div class="input-group-btn">
+                <button id="up" class="btn btn-primary" onclick="up('{{cupcake.noofitems}}')"><span class="glyphicon glyphicon-plus">+</span></button>
+                
+            </div>
+        </div> {% endcomment %}
+    </div></p> 
+    
+    </div>
+  </div>
+  <br>
+    {% comment %} <div class="left"> 
+      <input type="hidden" id="p1" value="{{cupcake.price}}"/>
+      <br>
+      <br>
+      <font color="#121914" size="5px">
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <span>Price</span>
+      </font>
+      <input type="button" id="price"  value="{{cupcake.price}}"/>
+       
+    </div> {% endcomment %}
+
+     
+    {% comment %} <form class="form-inline my-2" action ={% url 'cart' %} method="GET" >
+     <input 
+    class="form-control"
+    type="text"
+     placeholder= "Find Contacts....." 
+    name='search_term'
+    /> 
+      <button class="btn" type= "submit" ><i class="fa fa-shopping-cart"></i> Add to cart</p>
+      </form> {% endcomment %}
+  
+
+  </div>
+</div>
+
+    <!-- Main Section ends-->
+
+    <!-- footer -->
+    
+    <!-- footer ends -->
+  
+  </body>
+</html>
+{% comment %} <script>
+
+function price()
+{
+ document.getElementById("price").style.color = "red";
+     
+}
+
+const arrows = document.querySelector('.quantity').querySelectorAll('.fa');
+
+const handleChange = elem => {
+  const qt = document.querySelector('#qt');
+  const total = document.querySelector('#price');
+  let value = parseInt(qt.innerText);
+  let classArr = Array.from(elem.classList);
+  if (/right/gi.test(classArr)) {
+    if (value != 9) value++;else
+    alert('Watch out! We\'ve got a badass over here!');
+  } else
+  {
+    if (value != 1) value--;else
+    alert('Watch out! We\'ve got a badass over here!');
+  }
+  qt.innerText = value;
+  total.innerText = '$' + value * 320;
+};
+
+const product = document.querySelector('.product');
+
+const moveBox = val => {
+  product.style.mozTransform =
+  product.style.msTransform =
+  product.style.webkitTransform =
+  product.style.transform = 'translateX(' + val + 'px)';
+};
+
+const back = document.querySelector('.back');
+
+const spring = new rebound.SpringSystem();
+
+let animation = spring.createSpring(60, 3);
+
+animation.addListener({
+  onSpringUpdate(spring) {
+    let current = spring.getCurrentValue();
+    if (current > 1) spring.setEndValue(0);
+    let val = rebound.MathUtil.mapValueInRange(current, 0, 1, 0, 20);
+    moveBox(val);
+  } });
+
+
+back.addEventListener('click', () => {
+  animation.setEndValue(1);
+});
+
+
+const arrArr = Array.from(arrows);
+
+arrArr.forEach(elem => {
+  elem.addEventListener('click', () => {
+    handleChange(elem);
+  });
+});
+
+
+function up(max) 
+{
+  
+    document.getElementById("myNumber").value = parseInt(document.getElementById("myNumber").value) + 1;
+    
+    console.log(document.getElementById("myNumber").value);
+    
+    
+    if (document.getElementById("myNumber").value > parseInt(max)) 
+    {
+      
+        document.getElementById("myNumber").value = max;
+    }
+    else
+    {
+          document.getElementById("price").value=parseInt(document.getElementById("p1").value ) * parseInt(document.getElementById("myNumber").value);
+    }
+    
+}
+function down(min) {
+    document.getElementById("myNumber").value = parseInt(document.getElementById("myNumber").value) - 1;
+
+    if (document.getElementById("myNumber").value < parseInt(min)) {
+        document.getElementById("myNumber").value = min;
+    }
+
+     else
+    {
+          document.getElementById("price").value=parseInt(document.getElementById("price").value ) - parseInt(document.getElementById("p1").value);
+    }
+}
+
+
+</script> {% endcomment %}

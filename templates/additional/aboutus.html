@@ -1,0 +1,306 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="assets/ico/manifest.json">
+    <link rel="mask-icon" href="assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <meta name="msapplication-config" content="assets/ico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Yukthi</title>
+
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" href="{% static './css/1.css'%}">
+    <link rel="stylesheet" href="{% static './css/2.css'%}">
+    <link rel="stylesheet" href="{% static './css/3.css'%}">
+
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="{% static './css/4.css'%}">
+
+  </head>
+  <body>
+<style>
+
+.section_header
+{
+  background-image:url('http://www.drvevents.com/wp-content/uploads/2017/01/convention_conad_free_event_12.jpg');
+}
+</style>
+    <!-- NAVBAR
+    ================================================== -->
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top">
+        <div class="container">
+
+            <!-- Navbar: Brand -->
+            <a class="navbar-brand d-lg-none" href="{% url 'home' %}">Yukthi</a>
+
+            <!-- Navbar: Toggler -->
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navbar: Collapse -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Navbar navigation: Left -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Menu
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="nav-item__menu">
+                            <a class="dropdown-item" href="menu.html">Menu: Standard</a>
+                            <a class="dropdown-item" href="menu_no-images.html">Menu: No Images</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservation.html">Reservation</a>
+                    </li>
+                </ul>
+
+                <!-- Brand name -->
+                <a class="navbar-brand navbar-brand_2 d-none d-lg-flex" href="index.html">
+                    YUKTHI
+                </a>
+
+                <!-- Navbar navigation: Right -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="news-and-events.html">News & Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact</a>
+                    </li>
+                </ul>
+
+            </div> <!-- / .navbar-collapse -->
+
+        </div> <!-- / .container -->
+    </nav> <!-- / .navbar -->
+
+    <!-- HEADER
+    ================================================== -->
+    <section class="section section_header" data-parallax="scroll" data-image-src="assets/img/36.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    
+                    <!-- Heading -->
+                    <h1 class="section__heading section_header__heading text-center">
+                        About Us
+                    </h1>
+
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </section>
+
+    <!-- DISCOVER
+    ================================================== -->
+    <section class="section section_discover">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 align-self-start">
+                    
+                    <!-- Description -->
+                    <p class="section_discover__description">
+                        yukthi event organization where we can plan your events
+                    </p>
+    
+                </div>
+                <div class="col-md-4 align-self-start">
+                    
+                    <!-- Image -->
+                    <div class="section_discover__img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxi3jmFxgsiygDwBfQn1zDyspVTrDFrQdAM9Irz5o0_hvmXIYH" class="img-fluid" alt="...">
+                    </div>
+
+                </div>
+                <div class="col-md-6 align-self-center">
+                    
+                    <!-- Content -->
+                    <h2><em>Welcome to </em> Yukthi organization</h2>
+                    <p>
+                    While functions and parties are fun events, planning them requires serious attention to details and excellence in management skills. At BookTheParty, we bring professional execution rhythm to the entertainment quotient of events that can either be a celebration of the memory or the things to come in future.    
+                    </p>
+                    <p>
+                        Since the inception of BookTheParty, we have evolved as a service provider to mature into a brand that comes with trust and reliability. We assess all your requirements and get your party organized with the help of a suitable service provider that is a part of our umbrella. We provide you access to professionals that see through your requirements and make sure everything is in place before the party starts.
+                    </p>
+                    
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </section>
+
+    <!-- QUOTE
+    ================================================== -->
+    <section class="section section_quote section_gray">
+        <div class="container section_quote__container">
+            <div class="row">
+                <div class="col col-md-8 ml-md-auto mr-md-auto">
+    
+                    <!-- Blockquote -->
+                    <blockquote class="section_quote__blockquote">
+                        <p class="text-center">
+                    Event management is the application of project management to the creation and development of large-scale events such as festivals, conferences, ceremonies, weddings, formal parties, concerts, or conventions.
+                        </p>
+                        <footer class="text-center">
+                            Akhil Sangubotla
+                        </footer>
+                    </blockquote>
+    
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </section>
+
+    <!-- INFO
+    ================================================== -->
+    <section class="section section_info section_info_opposite">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+    
+                    <!-- Heading -->
+                    <h2 class="section__heading text-center">
+                        Event means
+                    </h2>
+
+                    <!-- Subheading -->
+                    <p class="section__subheading text-center">
+                        a thing that happens or takes place, especially one of importance.
+                    </p>
+    
+                </div>
+            </div> <!-- / .row -->
+            <div class="row align-items-justify">
+                <div class="col-md-6 order-md-3">
+                    
+                    <div class="section_info__img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu8tBfYoCNUtVawIVCGoQwZrSmUmpT3279JgjM9cLKPb3TWAqW" alt="...">
+                    </div>
+
+                </div>
+                <div class="col-md-1 order-md-2"></div>
+                <div class="col-md-5 order-md-1">
+
+                    <div class="section_info__body">
+                        <p>
+                    While you enjoy the party, our service providers constantly work in proper synchronization to ensure that each function is the best reflection of teamwork and creativity. As a company that understands the meaning of professionalism in the word “Party”, we are your one-stop-shop for all kinds of event-based solutions. We specialize in providing you access to teams that cater to tailor-made solutions with a diverse range of requirements. We ensure that your parties are the perfect reflection of excellence and quality of the highest standards. We set the benchmark for event management that is fun and comes with constant innovation and unique ideas.   </p>
+                        
+                        <br>
+                        <p>
+                            <a href="{% url 'contact' %}" class="btn btn-primary">
+                                Contact Us
+                            </a>
+                        </p>
+                    </div>
+                    
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </section>
+
+    <!-- MAP
+    ================================================== -->
+
+    <!-- FOOTER
+    ================================================== -->
+    <footer class="section section_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                
+                    <!-- About Us -->
+                    <h5 class="section_footer__heading">
+                        About Us
+                    </h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolorum, sint corporis nostrum, possimus unde eos vitae eius quasi saepe.
+                    </p>
+
+                </div>
+                <div class="col-sm-4">
+                
+                    <!-- Contact info -->
+                    <h5 class="section_footer__heading">
+                        Contact info
+                    </h5>
+                    <ul class="section_footer__info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i> MSIT jntu hyderabad telangana
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i> 8985935228
+                        </li>
+                        <li>
+                            <i class="far fa-envelope"></i> <a href="mailto:akhilsangubotla@gmail.com">akhilsangubotla@gmail.com</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-sm-4">
+                
+                    <!-- Opening hours -->
+                    <h5 class="section_footer__heading">
+                        Opening hours
+                    </h5>
+                    <div class="section_footer__open">
+                        <div class="section_footer__open__days">Monday - Thursday</div>
+                        <div class="section_footer__open__time">10:00 AM - 11:00 PM</div>
+                    </div>
+                    <div class="section_footer__open">
+                        <div class="section_footer__open__days">Friday - Sunday</div>
+                        <div class="section_footer__open__time">12:00 AM - 03:00 AM</div>
+                    </div>
+
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-12">
+                
+                    <!-- Copyright -->
+                    <div class="section_footer__copyright">
+                        &copy; <span id="js-current-year"></span> Yukthi. All rights reserved.
+                    </div>
+
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </footer>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+
+    <!-- JS Global -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnKt8_N4-FKOnhI_pSaDL7g_g-XI1-R9E"></script>
+
+    <!-- JS Plugins -->
+    <script src="assets/plugins/parallax/parallax.min.js"></script>
+    <script src="assets/plugins/isotope/lib/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/plugins/flickity/flickity.pkgd.min.js"></script>
+    <script src="assets/plugins/lightbox/js/lightbox.min.js"></script>
+    <script src="assets/plugins/reservation/reservation.js"></script>
+    <script src="assets/plugins/alerts/alerts.js"></script>
+
+    <!-- JS Custom -->
+    <script src="assets/js/theme.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>

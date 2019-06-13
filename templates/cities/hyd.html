@@ -1,0 +1,314 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
+	<link rel="manifest" href="assets/ico/manifest.json">
+	<link rel="mask-icon" href="assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="assets/ico/favicon.ico">
+	<meta name="msapplication-config" content="assets/ico/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Yukthi</title>
+
+	<!-- CSS Plugins -->
+	<link rel="stylesheet" href="{% static './css/1.css'%}">
+	<link rel="stylesheet" href="{% static './css/2.css'%}">
+	<link rel="stylesheet" href="{% static './css/3.css'%}">
+
+	<!-- CSS Global -->
+	<link rel="stylesheet" href="{% static './css/4.css'%}">
+
+  </head>
+  <body>
+<style>
+
+.section_header
+{
+  background-image:url('https://content3.jdmagicbox.com/comp/alwar/x6/9999px144.x144.160106175449.d3x6/catalogue/goyal-marriage-event-alwar-ho-alwar-event-organisers-l6cj2wd.jpg');
+}
+</style>
+	<!-- NAVBAR
+	================================================== -->
+	<nav class="navbar navbar-light navbar-expand-lg fixed-top">
+		<div class="container">
+
+			<!-- Navbar: Brand -->
+			<a class="navbar-brand d-lg-none" href="{% url 'home' %}">Yukthi</a>
+
+			<!-- Navbar: Toggler -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<!-- Navbar: Collapse -->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+				<!-- Navbar navigation: Left -->
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="about-us.html">About Us</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="nav-item__menu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Events
+						</a>
+						<div class="dropdown-menu" aria-labelledby="nav-item__menu1">
+							<a class="dropdown-item" href="menu.html">Birthday</a>
+							<a class="dropdown-item" href="menu_no-images.html">Wedding</a>
+							<a class="dropdown-item" href="menu_no-images.html">cradle</a>
+							<a class="dropdown-item" href="menu_no-images.html">House warming</a>
+							<a class="dropdown-item" href="menu_no-images.html">Saree function</a>
+							<a class="dropdown-item" href="menu_no-images.html">Baby shower</a>
+							<a class="dropdown-item" href="menu_no-images.html">Business</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="reservation.html">Register</a>
+					</li>
+				</ul>
+
+				<!-- Navbar: Brand -->
+				<a class="navbar-brand d-none d-lg-flex" href="{% url 'home' %}">
+					Yukthi
+				</a>
+
+				<!-- Navbar navigation: Right -->
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="news-and-events.html">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="gallery.html">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact-us.html">Feedback</a>
+					</li>
+                    
+				</ul>
+
+			</div> <!-- / .navbar-collapse -->
+
+		</div> <!-- / .container -->
+	</nav> <!-- / .navbar -->
+	<!-- WELCOME
+	================================================== -->
+	<section class="section section_header" data-parallax="scroll" data-image-src="assets/img/32.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					
+					<!-- Heading -->
+					<h1 class="section__heading section_header__heading text-center">
+						Yukthi Hyderabad
+					</h1>
+
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+	<br>
+	<br>
+	<H1 class="section__heading section_header__heading text-center" style="color:black">Our Events</H1>
+	<!-- DISCOVER
+	================================================== -->
+	<section class="section section_discover section_no-padding_bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 align-self-start">
+					
+					<div class="card" style="width: 24rem;">
+  <a href="{% url 'birthday' %}"><img class="card-img-top" src="https://static1.squarespace.com/static/52dcf450e4b0cb24e89a75cb/52dfdd95e4b0dd84eff37193/58dcca9d9de4bb47fd2fd3dc/1490865003582/IMG_2212.jpg" alt="Card image cap" >
+  <div class="card-body">
+    <h3><p class="card-text" align="center" style="color:black">Birthday Event</p></h3>
+  </div></a>
+</div>
+	
+				</div>
+				<div class="col-md-4 align-self-start">
+					
+					<div class="card" style="width: 24rem;">
+						<a href="{% url 'wedding' %}"> <img class="card-img-top" src="http://www.wedandbeyond.com/images/vendors/vendor_592012744a00e172000/Decorators-17033755png17033755.png" alt="Card image cap">
+  <div class="card-body">
+    <h3><p class="card-text" align="center" style="color:black">Wedding Event</p></h3>
+  </div></a>
+</div>
+
+				</div>
+				<div class="col-md-4 align-self-center">
+					
+				<div class="card" style="width: 24rem;">
+<a href="{% url 'saree' %}">  <img class="card-img-top" src="https://i.pinimg.com/originals/80/51/50/8051503959210d1292f8719c009de484.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h3><p class="card-text" align="center" style="color:black">Saree Function</p></h3>
+  </div></a>
+</div>
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+
+	<!-- DISCOVER
+	================================================== -->
+
+	<!-- ABOUT
+	================================================== -->
+	
+
+	<!-- MENU
+	
+	<!-- DISHES
+	================================================== -->
+	
+	<!-- TESTIMONIALS
+	================================================== -->
+
+	<!-- EVENTS
+	================================================== -->
+	
+	<!-- NEWSLETTER
+	
+	<!-- NEWSLETTER CLONE
+	================================================== -->
+	<!--
+		MailChimp newsletters generally cannot be used more than
+		once on a page, because this will cause HTML IDs conflict.
+		This section solves this problem by calling the 
+		original sign-up form and imitating its behaviour. Please 
+		don't use it without the original sign-up form. Remove 
+		d-none to make it visible.
+	-->
+
+	<!-- GALLERY
+	================================================== -->
+	<section class="section section_gallery">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 align-self-start">
+					
+					<div class="card" style="width: 24rem;">
+						<a href="{% url 'babyshower'%}"> <img class="card-img-top" src="https://i.pinimg.com/originals/73/67/76/73677610133e5d3c1aa7fcfae206660f.jpg" alt="Card image cap" >
+  <div class="card-body">
+    <h3><p class="card-text" align="center" style="color:black">Baby shower</p></h3>
+  </div></a>
+</div>
+	
+				</div>
+				<div class="col-md-4 align-self-start">
+					
+					<div class="card" style="width: 24rem;">
+						<a href="{% url 'bachelor' %}"> <img class="card-img-top" src="https://media.weddingz.in/images/f016bc59321a3eb3969e87b99f28cb41/how-to-blend-western-wedding-ideas-in-traditional-indian-wedding-celebrations-bridal-showers-or-bachelorettebachelor-parties-2.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h3><p class="card-text" align="center" style="color:black">Bachelor's party</p></h3>
+  </div></a>
+</div>
+
+				</div>
+				<div class="col-md-4 align-self-center">
+					
+				<div class="card" style="width: 24rem;">
+					<a href="{% url 'surprise' %}"> <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD_gu9uoIXuRv69dDqOMM486-m1bm5JkYujYFjvGZ0WdhZngwb" alt="Card image cap">
+  <div class="card-body">
+    <h3><p class="card-text" align="center" style="color:black">Surprise party</p></h3>
+  </div></a>
+</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+
+
+
+	<!-- FOOTER
+	================================================== -->
+	<footer class="section section_footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+				
+					<!-- About Us -->
+					<h5 class="section_footer__heading">
+						About Us
+					</h5>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolorum, sint corporis nostrum, possimus unde eos vitae eius quasi saepe.
+					</p>
+
+				</div>
+				<div class="col-sm-4">
+				
+					<!-- Contact info -->
+					<h5 class="section_footer__heading">
+						Contact info
+					</h5>
+					
+					<ul class="section_footer__info">
+						<li>
+							<i class="fas fa-map-marker-alt"></i> MSIT JNTU Hyderabad telangana
+						</li>
+						<li>
+							<i class="fas fa-phone"></i> +91 8985873700
+						</li>
+						<li>
+							<i class="far fa-envelope"></i> <a href="mailto:akhilsangubotla@gmail.com">akhilsangubotla@gmail.com</a>
+						</li>
+					</ul>
+
+				</div>
+				<div class="col-sm-4">
+				
+					<!-- Opening hours -->
+					<h5 class="section_footer__heading">
+						Opening hours
+					</h5>
+					<div class="section_footer__open">
+						<div class="section_footer__open__days">Monday - Thursday</div>
+						<div class="section_footer__open__time">10:00 AM - 11:00 PM</div>
+					</div>
+					<div class="section_footer__open">
+						<div class="section_footer__open__days">Friday - Sunday</div>
+						<div class="section_footer__open__time">12:00 AM - 03:00 AM</div>
+					</div>
+
+				</div>
+			</div> <!-- / .row -->
+			<div class="row">
+				<div class="col-12">
+				
+					<!-- Copyright -->
+					<div class="section_footer__copyright">
+						&copy; <span id="js-current-year"></span> Yukthi. All rights reserved.
+					</div>
+
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</footer>
+
+	<!-- JAVASCRIPT
+	================================================== -->
+
+	<!-- JS Global -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnKt8_N4-FKOnhI_pSaDL7g_g-XI1-R9E"></script>
+
+	<!-- JS Plugins -->
+	<script src="assets/plugins/parallax/parallax.min.js"></script>
+	<script src="assets/plugins/isotope/lib/imagesloaded.pkgd.min.js"></script>
+	<script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+	<script src="assets/plugins/flickity/flickity.pkgd.min.js"></script>
+	<script src="assets/plugins/lightbox/js/lightbox.min.js"></script>
+	<script src="assets/plugins/reservation/reservation.js"></script>
+	<script src="assets/plugins/alerts/alerts.js"></script>
+
+	<!-- JS Custom -->
+	<script src="assets/js/theme.min.js"></script>
+	<script src="assets/js/custom.js"></script>
+
+
+  </body>
+</html>

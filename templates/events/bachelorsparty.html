@@ -1,0 +1,282 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
+	<link rel="manifest" href="assets/ico/manifest.json">
+	<link rel="mask-icon" href="assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="assets/ico/favicon.ico">
+	<meta name="msapplication-config" content="assets/ico/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Yukthi</title>
+
+	<!-- CSS Plugins -->
+	<link rel="stylesheet" href="{% static './css/1.css'%}">
+	<link rel="stylesheet" href="{% static './css/2.css'%}">
+	<link rel="stylesheet" href="{% static './css/3.css'%}">
+
+	<!-- CSS Global -->
+	<link rel="stylesheet" href="{% static './css/4.css'%}">
+
+  </head>
+  <body>
+<style>
+
+.section_header
+{
+  background-image:url('https://www.fantabulousgreece.com/wp-content/uploads/2019/04/bachelor-parties.jpg');
+}
+</style>
+	<!-- NAVBAR
+	================================================== -->
+	<nav class="navbar navbar-light navbar-expand-lg fixed-top">
+		<div class="container">
+
+			<!-- Navbar: Brand -->
+			<a class="navbar-brand d-lg-none" href="{% url 'home' %}">Yukthi</a>
+
+			<!-- Navbar: Toggler -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<!-- Navbar: Collapse -->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+				<!-- Navbar navigation: Left -->
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="about-us.html">About Us</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Menu
+						</a>
+						<div class="dropdown-menu" aria-labelledby="nav-item__menu">
+							<a class="dropdown-item" href="menu.html">Menu: Standard</a>
+							<a class="dropdown-item" href="menu_no-images.html">Menu: No Images</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="reservation.html">Reservation</a>
+					</li>
+				</ul>
+
+				<!-- Navbar: Brand -->
+				<a class="navbar-brand d-none d-lg-flex" href="{% url 'home' %}">
+					Yukthi
+				</a>
+
+				<!-- Navbar navigation: Right -->
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="news-and-events.html">News & Events</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="gallery.html">Gallery</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact-us.html">Contact</a>
+					</li>
+				</ul>
+
+			</div> <!-- / .navbar-collapse -->
+
+		</div> <!-- / .container -->
+	</nav> <!-- / .navbar -->
+
+	<!-- WELCOME
+	================================================== -->
+	<section class="section section_header" data-parallax="scroll" data-image-src="assets/img/32.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					
+					<!-- Heading -->
+					<h1 class="section__heading section_header__heading text-center">
+                            CELEBRATE YOUR BACHELOR PARTY THAT LASTS LONGER
+					</h1>
+
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+	<br>
+	<br>
+	<br>
+	<br>
+    <H1 class="section__heading section_header__heading text-center" style="color:black ; font-family: Edwardian Script ITC; font-size: 70px">Bachelor Party</H1>
+    <br>
+    <p class="section__subheading text-center">We have the most fulfilling solution for a whole range of needs for bachelor parties. With YUKTHI.in this is indeed not an issue as we can assure about booking the most reckoned destinations. It’s a huge experience, and a strong network that we carry enables us in showing such confidence. YUKTHI.in has an explicit team of professionals for the bachelor parties. They know it well on what takes it to meet the expectations of the bachelors. Moreover, they carry a massive experience in this regard. </p>
+	
+	<!-- DISCOVER
+	================================================== -->
+	<section class="section section_discover section_no-padding_bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 align-self-start">
+					
+					<div class="card" style="width: 24rem;">
+  <a href="{% url 'farmhouse' %}"><img class="card-img-top" src="http://barkerevans.com/wp-content/uploads/2016/09/cc87.jpg" >
+  <div class="card-body">
+    <h3><p class="card-text" align="center" style="color:black">Farm houses</p></h3>
+  </div></a>
+</div>
+	
+				</div>
+				<div class="col-md-4 align-self-start">
+					
+					<div class="card" style="width: 24rem;">
+						<a href="{% url 'villas' %}"> <img class="card-img-top" src="https://www.amlu.com/wp-content/uploads/2016/10/arts-philanthropist-elaine-wynn-posts-idaho-mansion-for-sale-for-25m10-730x502.jpg">
+  <div class="card-body">
+    <h3><p class="card-text" align="center" style="color:black">Villas</p></h3>
+  </div></a>
+</div>
+
+				</div>
+				<div class="col-md-4 align-self-center">
+					
+				<div class="card" style="width: 24rem;">
+<a href="{% url 'pubs'%}">  <img class="card-img-top" src="data:image/jpeg;base64,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"alt="card image cap">
+  <div class="card-body">
+    <h3><p class="card-text" align="center" style="color:black">Pubs</p></h3>
+  </div></a>
+</div>
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+
+]
+	<!-- GALLERY
+	================================================== -->
+	<section class="section section_gallery">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 align-self-start">
+					
+					<div class="card" style="width: 24rem;">
+						<a href="{% url 'outstation' %}"> <img class="card-img-top" src="https://img.traveltriangle.com/blog/wp-content/uploads/2017/04/summertime.jpg" alt="Card image cap" >
+  <div class="card-body">
+    <h3><p class="card-text" align="center" style="color:black">Out station booking</p></h3>
+  </div></a>
+</div>
+	
+				</div>
+				<div class="col-md-4 align-self-start">
+					
+					<div class="card" style="width: 24rem;">
+						<a href="{% url 'entertainment'%}"> <img class="card-img-top" src="https://twtalktalk.info/wp-content/uploads/2018/11/core_multimedia_package.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h3><p class="card-text" align="center" style="color:black">Entertainments</p></h3>
+  </div></a>
+</div>
+
+				</div>
+                <div class="col-md-4 align-self-start">
+					
+                        <div class="card" style="width: 24rem;">
+                            <a href="{% url 'food' %}"> <img class="card-img-top" src="https://i.ndtvimg.com/i/2015-10/meal-on-banana-leaf_625x350_81444718243.jpg" alt="Card image cap" >
+      <div class="card-body">
+        <h3><p class="card-text" align="center" style="color:black">Food</p></h3>
+      </div></a>
+    </div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>	<!-- MAP
+	================================================== -->
+
+	<!-- FOOTER
+	================================================== -->
+	<footer class="section section_footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+				
+					<!-- About Us -->
+					<h5 class="section_footer__heading">
+						About Us
+					</h5>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolorum, sint corporis nostrum, possimus unde eos vitae eius quasi saepe.
+					</p>
+
+				</div>
+				<div class="col-sm-4">
+				
+					<!-- Contact info -->
+					<h5 class="section_footer__heading">
+						Contact info
+					</h5>
+					
+					<ul class="section_footer__info">
+						<li>
+							<i class="fas fa-map-marker-alt"></i> MSIT JNTU Hyderabad telangana
+						</li>
+						<li>
+							<i class="fas fa-phone"></i> +91 8985873700
+						</li>
+						<li>
+							<i class="far fa-envelope"></i> <a href="mailto:akhilsangubotla@gmail.com">akhilsangubotla@gmail.com</a>
+						</li>
+					</ul>
+
+				</div>
+				<div class="col-sm-4">
+				
+					<!-- Opening hours -->
+					<h5 class="section_footer__heading">
+						Opening hours
+					</h5>
+					<div class="section_footer__open">
+						<div class="section_footer__open__days">Monday - Thursday</div>
+						<div class="section_footer__open__time">10:00 AM - 11:00 PM</div>
+					</div>
+					<div class="section_footer__open">
+						<div class="section_footer__open__days">Friday - Sunday</div>
+						<div class="section_footer__open__time">12:00 AM - 03:00 AM</div>
+					</div>
+
+				</div>
+			</div> <!-- / .row -->
+			<div class="row">
+				<div class="col-12">
+				
+					<!-- Copyright -->
+					<div class="section_footer__copyright">
+						&copy; <span id="js-current-year"></span> Yukthi. All rights reserved.
+					</div>
+
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</footer>
+
+	<!-- JAVASCRIPT
+	================================================== -->
+
+	<!-- JS Global -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnKt8_N4-FKOnhI_pSaDL7g_g-XI1-R9E"></script>
+
+	<!-- JS Plugins -->
+	<script src="assets/plugins/parallax/parallax.min.js"></script>
+	<script src="assets/plugins/isotope/lib/imagesloaded.pkgd.min.js"></script>
+	<script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+	<script src="assets/plugins/flickity/flickity.pkgd.min.js"></script>
+	<script src="assets/plugins/lightbox/js/lightbox.min.js"></script>
+	<script src="assets/plugins/reservation/reservation.js"></script>
+	<script src="assets/plugins/alerts/alerts.js"></script>
+
+	<!-- JS Custom -->
+	<script src="assets/js/theme.min.js"></script>
+	<script src="assets/js/custom.js"></script>
+
+  </body>
+</html>

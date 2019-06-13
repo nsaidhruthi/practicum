@@ -1,0 +1,564 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
+	<link rel="manifest" href="assets/ico/manifest.json">
+	<link rel="mask-icon" href="assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="assets/ico/favicon.ico">
+	<meta name="msapplication-config" content="assets/ico/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+<!--bootstrap-->
+
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Yukthi</title>
+
+	<!-- CSS Plugins -->
+	<link rel="stylesheet" href="{% static './css/1.css'%}">
+	<link rel="stylesheet" href="{% static './css/2.css'%}">
+	<link rel="stylesheet" href="{% static './css/3.css'%}">
+
+	<!-- CSS Global -->
+	<link rel="stylesheet" href="{% static './css/4.css'%}">
+
+  </head>
+  <body>
+<style>
+
+.section_welcome
+{
+  background-image:url('https://goldfishevents.com/wp-content/uploads/2016/02/Decor-cup1.jpg');
+}
+</style>
+	<!-- NAVBAR
+	================================================== -->
+	<nav class="navbar navbar-light navbar-expand-lg fixed-top">
+		<div class="container">
+
+			<!-- Navbar: Brand -->
+			<a class="navbar-brand d-lg-none" href="{% url 'home' %}">Yukthi</a>
+
+			<!-- Navbar: Toggler -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<!-- Navbar: Collapse -->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+				<!-- Navbar navigation: Left -->
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'about' %}">About Us</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="nav-item__menu" 
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Events
+						</a>
+						<div class="dropdown-menu" aria-labelledby="nav-item__menu">
+							<a class="dropdown-item" href="{% url 'birthday' %}">Birthday</a>
+                            <a class="dropdown-item" href="{% url 'wedding' %}">Wedding</a>
+                            <a class="dropdown-item" href="{% url 'bachelor'%}">Bachelor party</a>
+                            <a class="dropdown-item" href="{% url 'saree'%}">Saree function</a>
+                            <a class="dropdown-item" href="{% url 'babyshower' %}">Baby shower</a>
+                            <a class="dropdown-item" href="{% url 'surprise'%}">Surprise</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'register' %}">Register</a>
+					</li>
+				</ul>
+
+				<!-- Navbar: Brand -->
+				<a class="navbar-brand d-none d-lg-flex" href="{% url 'home' %}">
+					Yukthi
+				</a>
+
+				<!-- Navbar navigation: Right -->
+				<ul class="navbar-nav ml-auto">
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							User
+						</a>
+						<div class="dropdown-menu" aria-labelledby="nav-item__menu">
+								{% if request.user.is_authenticated %}
+								<a href="{% url 'logout' %}" class="dropdown-item">
+								Logout
+								  </a>
+								  <a class="dropdown-item" href="{% url 'edit_profile' %}">Change profile</a>
+							<a class="dropdown-item" href="{% url 'change_password' %}">Change password</a>
+							<a class="dropdown-item" href="{% url 'gotocart' %}">Cart</a>
+								  {% else %}
+								  <a class="dropdown-item" href="{% url 'register' %}">Register</a>
+							<a class="dropdown-item" href="{% url 'login' %}">Login</a>
+							{% endif %}
+						</div>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'contact' %}">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'feedback' %}">Feedback</a>
+					</li>
+                    
+				</ul>
+
+			</div> <!-- / .navbar-collapse -->
+
+		</div> <!-- / .container -->
+	</nav> <!-- / .navbar -->
+
+	<!-- WELCOME
+	================================================== -->
+	<section class="section section_welcome" data-parallax="scroll" >
+
+		<!-- Content -->
+		<div class="section_welcome__main">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col">
+						
+						<!-- Heading -->
+						<h2 class="section__preheading section_welcome__preheading text-center text-muted">
+							<span class="text-primary">Events</span> / Parties
+						</h2>
+						<h1 class="section__heading section_welcome__heading text-center">
+							Yukthi
+						</h1>
+						<p class="section__subheading section_welcome__subheading text-center text-muted">
+							Make your special moments more  Memorable...
+							<br>
+							Join with us to celebrate best moments of your life.. 
+							<h4 class="section__subheading section_welcome__subheading text-center text-muted">“Remember to celebrate milestones as you prepare for the road ahead.” – Nelson Mandela</h4>
+						</p>
+
+						<!-- Button -->
+						<div class="text-center">
+							<a href="#myModal" class="btn btn-primary text-white" data-toggle="modal" href="#myModal">
+								select your city
+							</a>
+						</div>
+		
+					</div>
+				</div> <!-- / .row -->
+			</div> <!-- / .container -->
+		</div>
+		<div class="alert alert-info alert-dismissible  " role="alert">
+				{% if messages %}
+			<ul class="messages">
+				{% for message in messages %}
+				<p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+				{% endfor %}
+			</ul>
+			{% endif %}
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <br>
+			  <br>
+		<!-- Footer -->
+		<div class="section_welcome__footer">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md">
+						
+						<!-- Social links -->
+						
+
+					</div>
+					<div class="col-md">
+						
+						<!-- Address -->
+						
+
+					</div>
+				</div> <!-- / .row -->
+			</div> <!-- / .container -->
+		</div>
+
+	</section>
+
+	<!-- DISCOVER
+	================================================== -->
+	<section class="section section_discover section_no-padding_bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 align-self-start">
+					
+					<!-- Description -->
+					<p class="section_discover__description">
+						New life begins here..!
+					</p>
+	
+				</div>
+				<div class="col-md-4 align-self-start">
+					
+					<!-- Image -->
+					<div class="section_discover__img">
+						<img src="https://s-media-cache-ak0.pinimg.com/736x/b5/70/23/b57023a2c1a0eaf353877d484e9f5e08.jpg" class="img-fluid" alt="...">
+					</div>
+
+				</div>
+				<div class="col-md-6 align-self-center">
+					
+					<!-- Content -->
+					<h2><em>Marriages are made in heaven</em> </h2>
+					<p>
+						"We make your marriage as heaven"
+					</p>
+
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+
+	<!-- DISCOVER
+	================================================== -->
+	<section class="section section_discover">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 order-md-2 align-self-end">
+					
+					<!-- Description -->
+					<p class="section_discover__description">
+						Surprise is the greatest gift which life can grant us. 
+					</p>
+	
+				</div>
+				<div class="col-md-4 order-md-3 align-self-start">
+					
+					<!-- Image -->
+					<div class="section_discover__img alt">
+						<img src="https://static.wixstatic.com/media/b52b78_9068d509683b4cb49f739f9f1257aa34~mv2_d_3679_2395_s_2.jpg" class="img-fluid" alt="...">
+					</div>
+
+				</div>
+				<div class="col-md-6 order-md-1 align-self-center">
+					
+					<!-- Content -->
+					<h2><em>Surprise bday Parties</em> </h2>
+					<p>
+						we are here to fecilitate you, to make your suprises more effective.
+					</p>
+
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+
+	<!-- ABOUT
+	================================================== -->
+	
+
+	<!-- MENU
+	
+	<!-- DISHES
+	================================================== -->
+	
+	<!-- TESTIMONIALS
+	================================================== -->
+
+	<!-- EVENTS
+	================================================== -->
+	
+	<!-- NEWSLETTER
+	
+	<!-- NEWSLETTER CLONE
+	================================================== -->
+	<!--
+		MailChimp newsletters generally cannot be used more than
+		once on a page, because this will cause HTML IDs conflict.
+		This section solves this problem by calling the 
+		original sign-up form and imitating its behaviour. Please 
+		don't use it without the original sign-up form. Remove 
+		d-none to make it visible.
+	-->
+	<section class="section section_gray section_newsletter d-none">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+	
+					<!-- Heading -->
+					<h2 class="section__heading section_newsletter__heading text-center">
+						Newsletter
+					</h2>
+					<p class="section__subheading text-center">
+							While functions and parties are fun events, planning them requires serious attention to details and excellence in management skills. At Yukthi, we bring professional execution rhythm to the entertainment quotient of events that can either be a celebration of the memory or the things to come in future.
+					</p>
+	
+				</div>
+			</div> <!-- / .row -->
+			<div class="row justify-content-center">
+				<div class="col-lg-6">
+					
+					<!-- Form -->
+					<form class="section_newsletter__form section_newsletter__form_clone">
+						<div class="row">
+							<div class="form-group col-md-9">
+								<label class="sr-only">E-mail address</label>
+								<input type="email" class="form-control" placeholder="Email address">
+							</div>
+							<div class="col-md-3 text-center">
+								<button type="submit" class="btn btn-primary">
+									Subscribe
+								</button>
+							</div>
+						</div>
+					</form>
+
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+
+	<!-- GALLERY
+	================================================== -->
+	<section class="section section_gallery">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+	
+					<!-- Heading -->
+					<h2 class="section__heading text-center">
+						Our gallery
+					</h2>
+
+					<!-- Subheading -->
+					<p class="section__subheading text-center">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					</p>
+	
+				</div>
+			</div> <!-- / .row -->
+			<div class="row section_gallery__grid">
+				<div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
+
+					<a href="https://www.fluentin3months.com/wp-content/uploads/2018/08/happy-birthday-in-different-languages.jpg" data-lightbox="gallery">
+						<img src="https://www.fluentin3months.com/wp-content/uploads/2018/08/happy-birthday-in-different-languages.jpg" class="img-fluid" alt="...">
+					</a>
+
+				</div>
+        <div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
+
+					<a href="https://www.shenai.pk/uploads/real_wedding/my_14537350081564703993.jpg" data-lightbox="gallery">
+						<img src="https://www.shenai.pk/uploads/real_wedding/my_14537350081564703993.jpg" class="img-fluid" alt="...">
+					</a>
+
+				</div>
+        
+				<div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
+
+					<a href="http://revelryeventdesigners.com/blog/wp-content/uploads/2012/12/12-disney-revelry-event-designers-sonia-sharma-adrenaphoto.jpg" data-lightbox="gallery">
+						<img src="http://revelryeventdesigners.com/blog/wp-content/uploads/2012/12/12-disney-revelry-event-designers-sonia-sharma-adrenaphoto.jpg" class="img-fluid" alt="...">
+					</a>
+
+				</div>
+				<div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
+
+					<a href="https://static1.squarespace.com/static/52dcf450e4b0cb24e89a75cb/52dfdd95e4b0dd84eff37193/58dcca9d9de4bb47fd2fd3dc/1490865003582/IMG_2212.jpg" data-lightbox="gallery">
+						<img src="https://static1.squarespace.com/static/52dcf450e4b0cb24e89a75cb/52dfdd95e4b0dd84eff37193/58dcca9d9de4bb47fd2fd3dc/1490865003582/IMG_2212.jpg" class="img-fluid" alt="...">
+					</a>
+
+				</div>
+				<div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
+
+					<a href="https://cdn0.weddingwire.in/img_g/articulos-india/2017/mandap/lead.jpg" data-lightbox="gallery">
+						<img src="https://cdn0.weddingwire.in/img_g/articulos-india/2017/mandap/lead.jpg" class="img-fluid" alt="...">
+					</a>
+
+				</div>
+				<div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
+
+					<a href="http://shopzters.com/js/kcfinder/upload/images/hiya%20reddy/swathi-reddy-daughter-half-saree-function5(1).jpg" data-lightbox="gallery">
+						<img src="http://shopzters.com/js/kcfinder/upload/images/hiya%20reddy/swathi-reddy-daughter-half-saree-function5(1).jpg" class="img-fluid" alt="...">
+					</a>
+
+				</div>
+				
+				
+				<div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
+
+					<a href="https://4.imimg.com/data4/HM/DC/ANDROID-29357249/product-500x500.jpeg" data-lightbox="gallery">
+						<img src="https://4.imimg.com/data4/HM/DC/ANDROID-29357249/product-500x500.jpeg" class="img-fluid" alt="...">
+					</a>
+
+				</div>
+        <div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item">
+
+					<a href="https://cdn.quotemykaam.com/services/wp-content/uploads/room-decoration-for-birthday-surprise.jpg" data-lightbox="gallery">
+						<img src="https://cdn.quotemykaam.com/services/wp-content/uploads/room-decoration-for-birthday-surprise.jpg" class="img-fluid" alt="...">
+					</a>
+
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+
+	<!-- MAP
+	================================================== -->
+	<section class="section section_map">
+		<div class="section_map__map" data-lat="40.7590403" data-lng="-74.0392713" data-zoom="12" data-info="<h4 class='section_map__map__heading text-center'>Touche restaurant</h4><p class='section_map__map__content text-center text-muted'>1234 Altschul, New York, NY 10027-0000<br>+1 987 654 3210</p>"></div>
+	</section>
+
+	<!-- FOOTER
+	================================================== -->
+	<footer class="section section_footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+				
+					<!-- About Us -->
+					<h5 class="section_footer__heading">
+						About Us
+					</h5>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolorum, sint corporis nostrum, possimus unde eos vitae eius quasi saepe.
+					</p>
+
+				</div>
+				<div class="col-sm-4">
+				
+					<!-- Contact info -->
+					<h5 class="section_footer__heading">
+						Contact info
+					</h5>
+					
+					<ul class="section_footer__info">
+						<li>
+							<i class="fas fa-map-marker-alt"></i> MSIT JNTU Hyderabad telangana
+						</li>
+						<li>
+							<i class="fas fa-phone"></i> +91 8985873700
+						</li>
+						<li>
+							<i class="far fa-envelope"></i> <a href="mailto:akhilsangubotla@gmail.com">akhilsangubotla@gmail.com</a>
+						</li>
+					</ul>
+
+				</div>
+				<div class="col-sm-4">
+				
+					<!-- Opening hours -->
+					<h5 class="section_footer__heading">
+						Opening hours
+					</h5>
+					<div class="section_footer__open">
+						<div class="section_footer__open__days">Monday - Thursday</div>
+						<div class="section_footer__open__time">10:00 AM - 11:00 PM</div>
+					</div>
+					<div class="section_footer__open">
+						<div class="section_footer__open__days">Friday - Sunday</div>
+						<div class="section_footer__open__time">12:00 AM - 03:00 AM</div>
+					</div>
+
+				</div>
+			</div> <!-- / .row -->
+			<div class="row">
+				<div class="col-12">
+				
+					<!-- Copyright -->
+					<div class="section_footer__copyright">
+						&copy; <span id="js-current-year"></span> Yukthi. All rights reserved.
+					</div>
+
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</footer>
+
+	<!-- JAVASCRIPT
+	================================================== -->
+
+	<!-- JS Global -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnKt8_N4-FKOnhI_pSaDL7g_g-XI1-R9E"></script>
+
+	<!-- JS Plugins -->
+	<script src="assets/plugins/parallax/parallax.min.js"></script>
+	<script src="assets/plugins/isotope/lib/imagesloaded.pkgd.min.js"></script>
+	<script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+	<script src="assets/plugins/flickity/flickity.pkgd.min.js"></script>
+	<script src="assets/plugins/lightbox/js/lightbox.min.js"></script>
+	<script src="assets/plugins/reservation/reservation.js"></script>
+	<script src="assets/plugins/alerts/alerts.js"></script>
+
+	<!-- JS Custom -->
+	<script src="assets/js/theme.min.js"></script>
+	<script src="assets/js/custom.js"></script>
+
+
+
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">select your city</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+		 
+        <div class="row">
+						<div class="col-md-4">
+							<a href="http://127.0.0.1:8000/hyd/"><img width="80" src="/static/images/119682.png" alt="" class="img-circle" style="border: 2px solid grey;"></a>
+							<span style="font-size:18px;" class="mt-0 text-white"><a href="http://127.0.0.1:8000/hyd/" align="center"><b>hyd </b></a></span>
+						</div>
+            	<div class="col-md-4">
+							<a href="http://127.0.0.1:8000/vijayawada/"><img width="80" src="http://welshicons.org/wp-content/uploads/Ancient-temple.jpg" alt="" class="img-circle" style="border: 2px solid grey;"></a>
+							<span style="font-size:18px;" class="mt-0 text-white"><a href="http://127.0.0.1:8000/vijayawada/" align="center"><b>Vijayawada</b></a></span>
+						</div>
+							<div class="col-md-4">
+							<a href="http://127.0.0.1:8000/chennai/"><img width="80" src="/static/images/119687.png" alt="" class="img-circle" style="border: 2px solid grey;"></a>
+							<span style="font-size:18px;" class="mt-0 text-white"><a href="http://127.0.0.1:8000/chennai/" align="center"><b>Chennai</b></a></span>
+						</div>
+						
+            	<div class="col-md-4">
+							<a href="http://127.0.0.1:8000/vizag/"><img width="80" src="https://cdn3.iconfinder.com/data/icons/nuclear-weapon/92/iconN123-11-512.png" alt="" class="img-circle" style="border: 2px solid grey;"></a>
+							<span style="font-size:18px;" class="mt-0 text-white"><a href="http://127.0.0.1:8000/vizag/" align="center"><b>vizag</b></a></span>
+						</div>
+
+            <div class="col-md-4">
+							<a href="http://127.0.0.1:8000/amaravathi/"><img width="80" src="https://media.istockphoto.com/vectors/gautama-buddha-with-raised-right-hand-on-vector-illustration-vector-id857341514" alt="" class="img-circle" style="border: 2px solid grey;"></a>
+							<span style="font-size:18px;" class="mt-0 text-white"><a href="http://127.0.0.1:8000/amaravathi/" align="center"><b>Amaravathi</b></a></span>
+						</div>
+
+            <div class="col-md-4">
+							<a href="http://127.0.0.1:8000/banglore/"><img width="80" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTHC-PEXCGphue12wm4e-MtK9EcN1IwXELwq_dIWAmNErckSTG_Q" alt="" class="img-circle" style="border: 2px solid grey;"></a>
+							<span style="font-size:18px;" class="mt-0 text-white"><a href="http://127.0.0.1:8000/banglore/" align="center"><b>Banglore</b></a></span>
+						</div>
+					</div>
+				
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
