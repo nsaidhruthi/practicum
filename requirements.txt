@@ -16,7 +16,7 @@ colorama==0.4.1
 constantly==15.1.0
 cryptography==2.7
 daphne==2.3.0
-Django==2.2.1
+Django==2.2.21
 Flask==1.0.2
 get==2018.11.19
 hyperlink==19.0.0
