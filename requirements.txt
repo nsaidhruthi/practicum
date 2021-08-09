@@ -38,7 +38,7 @@ PyHamcrest==1.9.0
 pylint==2.3.1
 pypiwin32==223
 pytz==2019.1
-pywin32==224
+pywin32==301
 query-string==2018.11.20
 request==2018.11.20
 requests==2.21.0
